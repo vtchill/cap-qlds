@@ -1,0 +1,30 @@
+default: &default
+  sv_tags: <%= ENV.fetch('SV_TAGS', '') %>
+  sv_hostname: <%= ENV.fetch('SV_HOSTNAME', 'QL Dedicated Server') %>
+  sv_mapPoolFile: <%= ENV.fetch('SV_MAP_POOL_FILE', 'mappool.txt') %>
+  g_voteFlags: <%= ENV.fetch('G_VOTE_FLAGS', '13320') %>
+  g_accessFile: <%= ENV.fetch('G_ACCESS_FILE', 'access.txt') %>
+  g_allowSpecVote: <%= ENV.fetch('G_ALLOW_SPEC_VOTE', '0') %>
+  g_allowVoteMidGame: <%= ENV.fetch('G_ALLOW_VOTE_MID_GAME', '0') %>
+  zmq_rcon_enable: <%= ENV.fetch('ZMQ_RCON_ENABLE', '1') %>
+  zmq_rcon_password: <%= ENV.fetch('ZMQ_RCON_PASSWORD', '') %>
+  zmq_stats_enable: <%= ENV.fetch('ZMQ_STATS_ENABLE', '1') %>
+  zmq_stats_password: <%= ENV.fetch('ZMQ_STATS_PASSWORD', '') %>
+
+duel: &duel
+  <<: *default
+  sv_mapPoolFile: mappool_vqlduel.txt
+  g_voteFlags: 13320
+  g_damage_lg: 6
+
+servers:
+  1: &1
+    <<: *duel
+  2: &2
+    <<: *duel
+  3: &3
+    <<: *duel
+  4: &4
+    <<: *duel
+  5: &5
+    <<: *duel

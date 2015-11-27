@@ -1,0 +1,29 @@
+#!/bin/bash
+# qlds.sh - quake live dedicated server start script
+# called by supervisor to start a quakelive server
+
+gameport=`expr $1 + <%= fetch(:qlds_gameport_start) %>`
+rconport=`expr $1 + <%= fetch(:qlds_rcon_port_start) %>`
+servernum=`expr $1 + 1`
+
+# starting vql duel 1...
+echo "Starting VQL duel servers..."
+exec <%= fetch(:qlds_x86) %> \
+  +set net_strict 1 \
+  +set net_port $gameport \
+  +set fs_homepath "<%= fetch(:deploy_to)/$gameport %>" \
+  # +set sv_tags "<%= fetch(:qlds_tags) %>" \
+  # +set sv_mapPoolFile "mappool_vqlduel.txt" \
+  # +set sv_hostname "#$servernum <%= fetch(:qlds_hostname) %>" \
+  # +set bot_enable "<%= fetch(:qlds_bot_enable) %>" \
+  # +set bot_nochat "<%= fetch(:qlds_bot_nochat) %>" \
+  # +set g_voteFlags "<%= fetch(:qlds_vote_flags) %>" \
+  # +set g_allowSpecVote "<%= fetch(:qlds_spec_vote) %>" \
+  # +set g_allowVoteMidGame "<%= fetch(:qlds_mid_game_vote) %>" \
+  # +set g_accessFile "<%= fetch(:qlds_access_file) %>" \
+  # +set zmq_rcon_enable "<%= fetch(:qlds_rcon_enable) %>" \
+  # +set zmq_rcon_password "<%= fetch(:qlds_rcon_password) %>" \
+  # +set zmq_stats_enable "<%= fetch(:qlds_stats_enable) %>" \
+  # +set zmq_stats_password "<%= fetch(:qlds_stats_password) %>" \
+  +set zmq_rcon_port $rconport \
+  +set zmq_stats_port $gameport
