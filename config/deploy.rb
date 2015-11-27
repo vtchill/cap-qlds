@@ -9,7 +9,7 @@ set :repo_url, fetch(:repo_url)
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
-set :deploy_to, -> { ENV.fetch('DEPLOY_PATH', "/home/#{fetch(:deploy_user)}/qlds") }
+set :deploy_to, -> { ENV.fetch('DEPLOY_PATH', "/home/#{fetch(:user)}/qlds") }
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -66,3 +66,7 @@ set :ssh_options, {
 namespace :deploy do
 
 end
+
+before 'deploy:check:linked_files', 'config:push'
+
+after 'deploy:publishing', 'deploy:restart'
