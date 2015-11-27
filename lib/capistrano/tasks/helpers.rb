@@ -8,7 +8,7 @@ def config(filename)
   File.read(File.expand_path("../../../config/#{filename}", __FILE__))
 end
 
-def erb_binding(file)
+def erb_file(file)
   ERB.new(template(file)).result(binding)
 end
 
