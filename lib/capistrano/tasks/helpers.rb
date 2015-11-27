@@ -1,11 +1,11 @@
 require 'erb'
 
 def template(filename)
-  File.read(File.expand_path("../../templates/#{filename}", __FILE__))
+  File.read("config/templates/#{filename}")
 end
 
 def config(filename)
-  File.read(File.expand_path("../../../config/#{filename}", __FILE__))
+  File.read("config/#{filename}")
 end
 
 def erb_file(file)
