@@ -38,9 +38,7 @@ set :keep_releases, 5
 
 set :repo_url, -> { ENV.fetch('REPOSITORY_URL', 'git@github.com:vtchill/cap-qlds.git') }
 set :supervisor, -> { ENV.fetch('SUPERVISOR', '/usr/local/bin/supervisord') }
-set :supervisor_conf_path, -> { ENV.fetch('SUPERVISOR_CONF_PATH', '/etc') }
-set :supervisor_conf, -> { ENV.fetch('SUPERVISOR_CONF', "#{fetch(:supervisor_conf_path)}/supervisord.conf") }
-set :upstart_path, -> { ENV.fetch('UPSTART_PATH' '/etc/init') }
+set :supervisor_conf_path, -> { ENV.fetch('SUPERVISOR_CONF', '/etc/supervisord.conf') }
 set :supervisor_upstart_conf, -> { ENV.fetch('SUPERVISOR_UPSTART_CONF', '/etc/init/supervisord.conf') }
 set :supervisor_process_name, -> { ENV.fetch('SUPERVISOR_PROCESS_NAME', 'qzeroded') }
 set :supervisor_num_processes, -> { ENV.fetch('SUPERVISOR_NUM_PROCESSES', 5).to_i }
