@@ -5,8 +5,8 @@ namespace :supervisor do
   task :upstart do
     on roles(:app) do
       within release_path do
-        supervisor_upstart_conf = erb_file('supervisord-upstart.conf.erb')
-        put_sudo(supervisor_upstart_conf, fetch(:supervisor_upstart_conf_path))
+        supervisor_upstart_conf = erb_file(template('supervisor-upstart.conf.erb'))
+        put_sudo(supervisor_upstart_conf, fetch(:supervisor_upstart_conf))
       end
     end
   end
@@ -15,7 +15,7 @@ namespace :supervisor do
   task :config do
     on roles(:app) do
       within release_path do
-        supervisor_conf = erb_file('supervisor.conf.erb')
+        supervisor_conf = erb_file(template('supervisor.conf.erb'))
         put_sudo(supervisor_conf, fetch(:supervisor_conf_path))
       end
     end
@@ -23,10 +23,10 @@ namespace :supervisor do
 
   %w(start stop restart status).each do |command|
     desc "supervisor #{command} service task"
-    task "#{command}" => [:upstart, :config] do
+    task "#{command}" do
       on roles(:app) do
         within release_path do
-          sudo :service, :supervisor, "#{command}"
+          sudo :service, :supervisord, "#{command}"
         end
       end
     end

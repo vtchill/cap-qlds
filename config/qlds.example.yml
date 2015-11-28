@@ -14,8 +14,19 @@ default: &default
 duel: &duel
   <<: *default
   sv_mapPoolFile: mappool_vqlduel.txt
-  g_voteFlags: 13320
   g_damage_lg: 6
+
+tdm: &tdm
+  <<: *default
+  sv_mapPoolFile: mappool_tdm.txt
+
+ctf: &ctf
+  <<: *default
+  sv_mapPoolFile: mappool_vqlctf.txt
+
+ca: &ca
+  <<: *default
+  sv_mapPoolFile: mappool_vqlca.txt
 
 servers:
   1: &1
@@ -23,8 +34,8 @@ servers:
   2: &2
     <<: *duel
   3: &3
-    <<: *duel
+    <<: *ca
   4: &4
-    <<: *duel
+    <<: *tdm
   5: &5
-    <<: *duel
+    <<: *ctf

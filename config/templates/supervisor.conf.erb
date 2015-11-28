@@ -142,11 +142,11 @@ serverurl=unix:///tmp/supervisor.sock ; use a unix:// URL  for a unix socket
 
 
 [program:quakelive]
-command=/home/steam/quakestart.sh %(process_num)s
-user=steam
+command=<%= "#{shared_path}/scripts/qlds.sh" %> %(process_num)s
+user=<%= fetch(:user) %>
 process_name=<%= fetch(:supervisor_process_name) %>_%(process_num)s
 numprocs=<%= fetch(:supervisor_num_processes) %>
 autostart=true
 autorestart=true
-stderr_logfile=/home/steam/.quakelive/log/qlds_%(process_num)s.err.log
-stdout_logfile=/home/steam/.quakelive/log/qlds_%(process_num)s.out.log
+stderr_logfile=<%= "#{fetch(:qlds_server_path)}/logs/qlds" %>_%(process_num)s.err.log
+stdout_logfile=<%= "#{fetch(:qlds_server_path)}/logs/qlds" %>_%(process_num)s.out.log
