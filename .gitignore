@@ -37,5 +37,6 @@ build/
 config/qlds.*.yml
 !config/qlds.example.yml
 
+.env
 .env.*
 !.env.example
