@@ -14,7 +14,7 @@ echo "Updating 'apt-get'..."
 apt-get update
 
 echo "Installing packages..."
-apt-get -y install python3 python-setuptools lib32gcc1 curl build-essential python-dev unzip wget lib32z1 lib32stdc++6 libc6
+apt-get -y install git python3 python-setuptools lib32gcc1 curl build-essential python-dev unzip wget lib32z1 lib32stdc++6 libc6
 
 echo "Adding user $QLDS_USER..."
 useradd -m $QLDS_USER
