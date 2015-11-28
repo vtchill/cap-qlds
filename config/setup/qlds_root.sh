@@ -30,5 +30,5 @@ echo "$QLDS_USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 echo "Installing Supervisor..."
 easy_install supervisor
 
-echo "All work done for 'root' user, please login to $QLDS_USER."
+echo "All work done for 'root' user, please login with $QLDS_USER user account."
 exit
