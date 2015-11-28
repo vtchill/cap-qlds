@@ -6,7 +6,7 @@ namespace :supervisor do
     on roles(:app) do
       within release_path do
         supervisor_upstart_conf = erb_file(template('supervisor-upstart.conf.erb'))
-        put_sudo(supervisor_upstart_conf, fetch(:supervisor_upstart_conf))
+        put_sudo(supervisor_upstart_conf, fetch(:upstart_path))
       end
     end
   end

@@ -13,9 +13,9 @@ namespace :qlds do
         script_file = "#{script_path}/qlds.sh"
         script_contents = erb_file(template('qlds.sh.erb'))
         execute :mkdir, '-p', script_path
-        execute :chmod, '744', script_file
         execute :mkdir, '-p', log_path
         upload_file(script_contents, script_file)
+        execute :chmod, '744', script_file
       end
     end
   end

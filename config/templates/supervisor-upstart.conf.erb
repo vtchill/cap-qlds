@@ -5,4 +5,4 @@ stop on runlevel [!2345]
 
 respawn
 
-exec <%= fetch(:supervisor) %> --nodaemon --configuration <%= fetch(:supervisor_conf_path) %>
+exec <%= fetch(:supervisor) %> --nodaemon --configuration <%= fetch(:supervisor_conf) %>
