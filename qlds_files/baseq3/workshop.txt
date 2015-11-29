@@ -5,3 +5,12 @@
 
 # Quake Live Holiday Pack
 539421982
+
+# QuakeCon 2015 map settings
+539419816
+
+#HoQ gametype factories
+547440642
+
+# No more HMG
+543197560

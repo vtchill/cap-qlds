@@ -1,0 +1,22 @@
+# specify 1 map per line, mapname|factoryid
+# ex: aerowalk|ffa
+# see factories.txt for valid factory id values
+
+aerowalk|qcon_duel
+battleforged|qcon_duel
+bloodrun|qcon_duel
+bloodrunblue|qcon_duel
+campgrounds|qcon_duel
+campgroundsblue|qcon_duel
+cure|qcon_duel
+delirium|qcon_duel
+dismemberment|qcon_duel
+elder|qcon_duel
+furiousheights|qcon_duel
+hektik|qcon_duel
+houseofdecay|qcon_duel
+lostworld|qcon_duel
+silence|qcon_duel
+sinister|qcon_duel
+toxicity|qcon_duel
+verticalvengeance|qcon_duel

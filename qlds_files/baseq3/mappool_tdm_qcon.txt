@@ -1,0 +1,27 @@
+# specify 1 map per line, mapname|factoryid
+# ex: aerowalk|ffa
+# see factories.txt for valid factory id values
+arcanecitadel|qcon_tdm
+arkinholm|qcon_tdm
+deepinside|qcon_tdm
+devilish|qcon_tdm
+diesirae|qcon_tdm
+dredwerkz|qcon_tdm
+foolishlegacy|qcon_tdm
+grimdungeons|qcon_tdm
+hiddenfortress|qcon_tdm
+leftbehind|qcon_tdm
+leviathan|qcon_tdm
+limbus|qcon_tdm
+purgatory|qcon_tdm
+ragnarok|qcon_tdm
+realmofsteelrats|qcon_tdm
+retribution|qcon_tdm
+solid|qcon_tdm
+terminatria|qcon_tdm
+terminus|qcon_tdm
+theedge|qcon_tdm
+theoldendomain|qcon_tdm
+tornado|qcon_tdm
+warehouse|qcon_tdm
+wargrounds|qcon_tdm

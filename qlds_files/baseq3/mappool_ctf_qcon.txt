@@ -1,0 +1,43 @@
+# specify 1 map per line, mapname|factoryid
+# ex: aerowalk|ffa
+# see factories.txt for valid factory id values
+basesiege|qcon_ctf
+beyondreality|qcon_ctf
+campercrossings|qcon_ctf
+citycrossings|qcon_ctf
+coldcathode|qcon_ctf
+courtyard|qcon_ctf
+cursed|qcon_ctf
+duelingkeeps|qcon_ctf
+electrocution|qcon_ctf
+falloutbunker|qcon_ctf
+finnegans|qcon_ctf
+fluorescent|qcon_ctf
+futurecrossings|qcon_ctf
+gospelcrossings|qcon_ctf
+industrialrevolution|qcon_ctf
+infinity|qcon_ctf
+innersanctums|qcon_ctf
+ironworks|qcon_ctf
+japanesecastles|qcon_ctf
+jumpwerkz|qcon_ctf
+lostparadise|qcon_ctf
+newcerberon|qcon_ctf
+overgrowth|qcon_ctf
+pillbox|qcon_ctf
+pulpfriction|qcon_ctf
+railyard|qcon_ctf
+rebound|qcon_ctf
+reflux|qcon_ctf
+scornforge|qcon_ctf
+shiningforces|qcon_ctf
+siberia|qcon_ctf
+skyward|qcon_ctf
+spacectf|qcon_ctf
+spidercrossings|qcon_ctf
+stonekeep|qcon_ctf
+stronghold|qcon_ctf
+thedukesgarden|qcon_ctf
+troubledwaters|qcon_ctf
+vortexportal|qcon_ctf
+zen|qcon_ctf
