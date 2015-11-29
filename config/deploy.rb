@@ -1,6 +1,11 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+Dotenv.load(
+  File.join(Dir.pwd, ".env.#{fetch(:stage)}"),
+  File.join(Dir.pwd, '.env')
+)
+
 set :application, 'qlds'
 set :repo_url, fetch(:repo_url)
 
