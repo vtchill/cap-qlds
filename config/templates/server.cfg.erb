@@ -104,5 +104,6 @@ set serverstartup "startRandomMap"
 
 
 <% server_settings.each_pair do |k, v| %>
+  <% v = "#{v} ##{server_num}" if k.to_s == 'sv_hostname' %>
   <%= %Q{set #{k.to_s} "#{v.to_s}"} %>
 <% end %>
