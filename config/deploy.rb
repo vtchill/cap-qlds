@@ -62,7 +62,7 @@ set :qlds_rcon_enable, -> { ENV.fetch('QLDS_RCON_ENABLE', 1) }
 set :qlds_rcon_password, -> { ENV.fetch('QLDS_RCON_PASSWORD', '') }
 
 set :user, -> { ENV.fetch('SSH_USER', 'steam') }
-set :ssh_key, -> { ENV.fetch('SSH_KEY', '~/.ssh/id_rsa') }
+set :ssh_key, -> { ENV.fetch('SSH_KEY', '~/.ssh/vtchill_github') }
 set :ssh_user, -> { fetch(:user) }
 
 set :ssh_options, {
