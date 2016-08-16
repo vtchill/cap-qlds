@@ -55,6 +55,13 @@ namespace :qlds do
     end
   end
 
+  desc 'update qlds steam package'
+  task :update do
+    on roles(:app) do
+      execute 'bash -c "$(curl -sSL https://raw.githubusercontent.com/vtchill/cap-qlds/master/config/setup/qlds_steam.sh)"'
+    end
+  end
+
   %w(start stop restart).each do |command|
     desc "supervisorctl #{command} quakelive processes"
     task "#{command}" do
