@@ -12,7 +12,7 @@ if [ "$(whoami)" -ne "$QLDS_USER" ]
 fi
 clear
 echo "Installing SteamCMD..."
-mkdir ~/steamcmd
+mkdir -p ~/steamcmd
 cd ~/steamcmd
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 tar -xvzf steamcmd_linux.tar.gz
