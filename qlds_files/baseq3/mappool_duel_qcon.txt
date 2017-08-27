@@ -5,9 +5,9 @@
 aerowalk|qcon_duel
 battleforged|qcon_duel
 bloodrun|qcon_duel
-bloodrunblue|qcon_duel
+# bloodrunblue|qcon_duel
 campgrounds|qcon_duel
-campgroundsblue|qcon_duel
+# campgroundsblue|qcon_duel
 cure|qcon_duel
 delirium|qcon_duel
 dismemberment|qcon_duel

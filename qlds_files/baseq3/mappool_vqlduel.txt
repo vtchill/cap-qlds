@@ -5,9 +5,9 @@
 aerowalk|duel
 battleforged|duel
 bloodrun|duel
-bloodrunblue|duel
+# bloodrunblue|duel
 campgrounds|duel
-campgroundsblue|duel
+# campgroundsblue|duel
 cure|duel
 delirium|duel
 dismemberment|duel
